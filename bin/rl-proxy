@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'sprout'
+require 'generators/proxy_generator'
+
+generator = ProxyGenerator.new
+generator.parse! ARGV
+generator.execute

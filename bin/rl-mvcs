@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'sprout'
+require 'generators/m_v_c_s_generator'
+
+generator = MVCSGenerator.new
+generator.parse! ARGV
+generator.execute

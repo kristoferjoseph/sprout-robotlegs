@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'sprout'
+require 'generators/context_generator'
+
+generator = ContextGenerator.new
+generator.parse! ARGV
+generator.execute
