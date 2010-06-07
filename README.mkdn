@@ -1,0 +1,3 @@
+# SYNOPSIS
+This is a robotlegs library for use with project sprouts.
+This library supplies you with generators for creating projects as well as classes to support a robotlegs project.
