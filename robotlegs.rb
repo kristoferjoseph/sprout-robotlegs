@@ -1,7 +1,8 @@
 require 'sprout'
 
-module Robotlegs  NAME    = 'robotlegs'
-  VERSION = '0.0.1'
+module Robotlegs  
+  NAME    = 'robotlegs'
+  VERSION = '1.0.pre'
 end
 
 Sprout::Specification.new do |s|
