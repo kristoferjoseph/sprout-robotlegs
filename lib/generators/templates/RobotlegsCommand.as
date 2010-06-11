@@ -9,7 +9,7 @@ package <%= package_name %>
 		*/
 		override public function execute():void
 		{
-			
+			//Your command content goes here dude
 		}
 	}
 }

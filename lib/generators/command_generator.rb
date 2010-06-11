@@ -8,7 +8,7 @@ module Sprout
 
     def manifest
       directory input.snake_case do
-        template "#{input.camel_case}.as", 'Command.as'
+        template "#{input.camel_case}.as", 'RobotlegsCommand.as'
       end
       
     end
