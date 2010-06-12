@@ -1,8 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'rubygems'
-require 'sprout'
-require 'generators/mediator_generator'
+require 'robotlegs'
 
 generator = MediatorGenerator.new
 generator.parse! ARGV

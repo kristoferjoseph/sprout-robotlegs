@@ -1,8 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'rubygems'
-require 'sprout'
-require 'generators/proxy_generator'
+require 'robotlegs'
 
 generator = ProxyGenerator.new
 generator.parse! ARGV

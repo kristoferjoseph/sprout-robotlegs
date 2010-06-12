@@ -1,5 +1,15 @@
 require 'sprout'
 
+lib = File.expand_path File.dirname(__FILE__)
+$:.unshift lib unless $:.include?(lib)
+
+require 'generators/project_generator'
+require 'generators/context_generator'
+require 'generators/proxy_generator'
+require 'generators/mediator_generator'
+require 'generators/command_generator'
+
+
 module Robotlegs  
   NAME    = 'robotlegs'
   VERSION = '1.0.pre'

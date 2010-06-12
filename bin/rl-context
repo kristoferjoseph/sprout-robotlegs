@@ -1,8 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'rubygems'
-require 'sprout'
-require 'generators/context_generator'
+require 'robotlegs'
 
 generator = ContextGenerator.new
 generator.parse! ARGV

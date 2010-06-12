@@ -1,8 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'rubygems'
-require 'sprout'
-require 'generators/command_generator'
+require 'robotlegs'
 
 generator = CommandGenerator.new
 generator.parse! ARGV

@@ -13,4 +13,5 @@ require 'mocha'
 $:.unshift File.expand_path(File.join(File.dirname(__FILE__), '..', '..', 'lib'))
 $:.unshift File.expand_path(File.join(File.dirname(__FILE__), '..'))
 
+require 'sprout/generator/base'
 require 'sprout/test/sprout_test_case'

@@ -1,8 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'rubygems'
-require 'sprout'
-require 'generators/project_generator'
+require 'robotlegs'
 
 generator = ProjectGenerator.new
 generator.parse! ARGV
