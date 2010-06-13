@@ -1,4 +1,4 @@
-# Project Sprouts Robotlegs Bundle _*Pre-Alpha_
+# Project Sprouts Robotlegs Gem _*Pre-Alpha_
 
 This RubyGem contains templates and libraries for developing [Robotlegs](http://www.robotlegs.org/) based MVCS DI applications in Actionscript 3.0 and Flex 4.0  
 
