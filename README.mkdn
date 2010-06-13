@@ -1,5 +1,67 @@
-# ROBOTLEGS SPROUTS LIBRARY
+# Project Sprouts Robotlegs Bundle _*Pre-Alpha_
 
-# SYNOPSIS
-This is a robotlegs library for use with project sprouts.
-This library supplies you with generators for creating projects as well as classes to support a robotlegs project.
+This RubyGem contains templates and libraries for developing [Robotlegs](http://www.robotlegs.org/) based MVCS DI applications in Actionscript 3.0 and Flex 4.0  
+
+>**WARNING** This is opinionated software. 
+This is not and will never be infinitely configurable. Care was taken to allow customization where needed, but it is made and tested to 	work the way I think it should. Please fork and add whatever features you feel are missing.
+
+## Description
+
+This bundle contains generators for creating:
+
+* Project
+* Context
+* Poxy
+* Mediator
+* Command
+
+
+## Prerequisites
+
+* [Ruby](http://www.ruby-lang.org/)
+* [Ruby Gems](http://rubygems.org/pages/download)
+* [git](http://git-scm.com/download)
+* [Sprouts v1-pre](http://github.com/lukebayes/project-sprouts)
+
+## Install:
+	
+	cd robotlegs
+	gem build robotlegs.gemspec 
+    gem install robotlegs-1.0.pre.gem
+    rl-project SomeProject
+	rl-proxy SomeProxy
+	rl-mediator SomeMediator
+	rl-command SomeCommand
+	
+	
+###TODO
+
+* Event
+* VO
+* DTO
+* Signal
+* Signals Project
+* Signal Command
+
+## MIT License
+
+Copyright (c) 2010 Kristofer Joseph
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

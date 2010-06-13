@@ -23,7 +23,7 @@ class ProjectGeneratorTest < Test::Unit::TestCase
       @generator.input = "Fwee"
       @generator.execute
 
-      input_dir = File.join(@temp, "fwee")
+      input_dir = File.join(@temp, "Fwee")
       assert_directory input_dir
       
       src_dir = File.join(input_dir, "src")
@@ -88,7 +88,7 @@ class ProjectGeneratorTest < Test::Unit::TestCase
       @generator.shallow = true
       @generator.execute
       
-      input_dir = File.join(@temp, "fwee")
+      input_dir = File.join(@temp, "Fwee")
       assert_directory input_dir
       
       vo_dir = File.join(input_dir, "src", "model", "vo")

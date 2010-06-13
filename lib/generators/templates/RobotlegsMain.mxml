@@ -12,25 +12,29 @@
                applicationComplete="<%= input.camel_case %>CompleteHandler(event)"
                currentState="">
 
-			<fx:Declarations>
-				<!-- You have to put all non-visual object declarations here -->
-			</fx:Declarations>
-			
-			<fx:Script>
-				<![CDATA[
-					//---------------------------------------
-					// PRIVATE METHODS
-					//---------------------------------------
-					
-					/**
-					 * @private
-					 */
-					private function <%= input.camel_case %>CompleteHandler():void
-					{
-						trace("<%= input.camel_case %>.mxml::<%= input.camel_case %>CompleteHandler()");
-					}
-				]]>
-			</fx:Script>
-			
+    <fx:Declarations>
+
+        <!-- You have to put all non-visual object declarations here -->
+		
+    </fx:Declarations>
+
+    <fx:Script>
+
+        <![CDATA[
+                    //---------------------------------------
+                    // PRIVATE METHODS
+                    //---------------------------------------
+
+                    /**
+                     * @private
+                     */
+                    private function <%= input.camel_case %>CompleteHandler():void
+                    {
+                        trace("<%= input.camel_case %>.mxml::<%= input.camel_case %>CompleteHandler()");
+                    }
+                ]]>
+
+</fx:Script>
+
 </s:Application>
 

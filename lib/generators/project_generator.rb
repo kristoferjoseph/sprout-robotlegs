@@ -4,6 +4,7 @@ class ProjectGenerator < Sprout::Generator::Base
   ##
   # Send flag shallow to prevent subdirectories vo, dto from being created
   add_param :shallow, Boolean
+  add_param :package, String, { :default => "com.foo.bar"}
   add_param :src, String, { :default => "src" }
   add_param :lib, String, { :default => "lib" }
   add_param :bin, String, { :default => "bin" }
@@ -21,7 +22,7 @@ class ProjectGenerator < Sprout::Generator::Base
   add_param :notifications, String, { :default => "events" }
 
   def manifest
-    directory input.snake_case do
+    directory input.camel_case do
 
       directory src do
         template "#{input.camel_case}Context.as", "RobotlegsContext.as"
