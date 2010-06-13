@@ -4,7 +4,7 @@ class ProjectGenerator < Sprout::Generator::Base
   ##
   # Send flag shallow to prevent subdirectories vo, dto from being created
   add_param :shallow, Boolean
-  add_param :package, String, { :default => "com.foo.bar"}
+  add_param :package, String, { :default => ""}
   add_param :src, String, { :default => "src" }
   add_param :lib, String, { :default => "lib" }
   add_param :bin, String, { :default => "bin" }
