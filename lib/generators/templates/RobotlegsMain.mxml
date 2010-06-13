@@ -1,40 +1,43 @@
 <s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
                xmlns:s="library://ns.adobe.com/flex/spark"
                xmlns:mx="library://ns.adobe.com/flex/mx"
+               xmlns:context="<% if package_name != "" %><%= package_name %>.<% end %><%= project_name.camel_case %>Context"
                minWidth="800"
                minHeight="600"
                width="1024"
                height="768"
                backgroundColor="0xFFFFFF"
-               pageTitle="<%= input.camel_case %>"
+               pageTitle="<%= project_name.camel_case %>"
                preloader=""
                usePreloader="true"
-               applicationComplete="<%= input.camel_case %>CompleteHandler(event)"
+               applicationComplete="<%= project_name.camel_case %>CompleteHandler()"
                currentState="">
 
     <fx:Declarations>
 
         <!-- You have to put all non-visual object declarations here -->
-		
+        <context:<%= project_name.camel_case %>Context contextView="{this}" />
+
     </fx:Declarations>
 
     <fx:Script>
 
         <![CDATA[
-                    //---------------------------------------
-                    // PRIVATE METHODS
-                    //---------------------------------------
+             
+             //---------------------------------------
+             // PRIVATE METHODS
+             //---------------------------------------
 
-                    /**
-                     * @private
-                     */
-                    private function <%= input.camel_case %>CompleteHandler():void
-                    {
-                        trace("<%= input.camel_case %>.mxml::<%= input.camel_case %>CompleteHandler()");
-                    }
-                ]]>
+             /**
+              * @private
+              */
+             private function <%= project_name.camel_case %>CompleteHandler():void
+             {
+                 trace("<%= project_name.camel_case %>.mxml::<%= project_name.camel_case %>CompleteHandler()");
+             }
+         ]]>
 
-</fx:Script>
+    </fx:Script>
 
 </s:Application>
 

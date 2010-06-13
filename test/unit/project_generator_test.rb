@@ -25,7 +25,7 @@ class ProjectGeneratorTest < Test::Unit::TestCase
 
       input_dir = File.join(@temp, "Fwee")
       assert_directory input_dir
-      
+            
       src_dir = File.join(input_dir, "src")
       assert_directory src_dir
       
@@ -84,11 +84,11 @@ class ProjectGeneratorTest < Test::Unit::TestCase
     end
     
     should "respect shallow" do
-      @generator.input = "Fwee"
+      @generator.input = "Fwi"
       @generator.shallow = true
       @generator.execute
       
-      input_dir = File.join(@temp, "Fwee")
+      input_dir = File.join(@temp, "Fwi")
       assert_directory input_dir
       
       vo_dir = File.join(input_dir, "src", "model", "vo")
@@ -96,6 +96,15 @@ class ProjectGeneratorTest < Test::Unit::TestCase
       
       dto_dir = File.join(input_dir, "src", "service", "dto")
       assert !File.exists?(dto_dir)
+      
+    end
+    
+    should "add package directories" do
+      @generator.input = "Fwo/com/developsigner"
+      @generator.execute
+      
+      input_dir = File.join(@temp, "Fwo", "src", "com", "developsigner")
+      assert_directory input_dir
       
     end
 
