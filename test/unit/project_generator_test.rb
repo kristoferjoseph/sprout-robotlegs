@@ -100,11 +100,15 @@ class ProjectGeneratorTest < Test::Unit::TestCase
     end
 
     should "add package directories" do
-      @generator.input = "Fwo/com/developsigner"
+      @generator.input = "Fwo"
+      @generator.package = "com/developsigner"
       @generator.execute
 
-      input_dir = File.join(@temp, "Fwo", "src", "com", "developsigner")
+      input_dir = File.join(@temp, "Fwo")
       assert_directory input_dir
+      
+      package_dir = File.join(input_dir, "src", "com", "developsigner")
+      assert_directory package_dir
 
     end
 

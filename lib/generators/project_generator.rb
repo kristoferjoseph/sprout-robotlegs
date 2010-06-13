@@ -27,9 +27,9 @@ module Robotlegs
         directory lib
         directory bin
 
-        directory class_directory do
-          template "#{project_name.camel_case}Context.as", "RobotlegsContext.as"
-          template "#{project_name.camel_case}.mxml", "RobotlegsMain.mxml"
+        directory package_directory do
+          template "#{project_name}Context.as", "RobotlegsContext.as"
+          template "#{project_name}.mxml", "RobotlegsMain.mxml"
           directory model do
             directory proxy
             directory vo unless shallow
@@ -59,13 +59,18 @@ module Robotlegs
     protected
 
       def project_name
-        return input_in_parts.slice(0)
+        return input.camel_case
+      end
+      
+      def package_directory
+        split_parts package
+        return File.join src, *package
       end
 
       def class_directory
         parts = input_in_parts
         if parts.size > 1
-          parts.slice!(0)
+          parts.pop
           return File.join src, *parts
         end
         return src
@@ -74,9 +79,8 @@ module Robotlegs
       def package_name
         parts = input_in_parts
         if parts.size > 1
-          #Assuming that the first word is to be the project name followed by the package
-          parts.slice!(0)
-          return "#{parts.join('.')}"
+          parts.pop
+          return "#{parts.join('.')} "
         end
         return ""
       end
@@ -87,7 +91,11 @@ module Robotlegs
       end
 
       def input_in_parts
-        provided_input = input
+        split_parts input
+      end
+      
+      def split_parts(value)
+        provided_input = value
         if provided_input.include?('/')
           provided_input.gsub! /^#{src}\//, ''
           provided_input = provided_input.split('/').join('.')
