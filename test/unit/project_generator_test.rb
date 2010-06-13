@@ -106,10 +106,31 @@ class ProjectGeneratorTest < Test::Unit::TestCase
 
       input_dir = File.join(@temp, "Fwo")
       assert_directory input_dir
-      
-      package_dir = File.join(input_dir, "src", "com", "developsigner")
+
+      src_dir = File.join(input_dir, "src")
+      assert_directory src_dir
+
+      package_dir = File.join(src_dir, "com", "developsigner")
       assert_directory package_dir
 
+      main_file = File.join(src_dir, "Fwo.mxml")
+      assert_file main_file do |content|
+        assert_match /FwoCompleteHandler/, content
+        assert_match /com.developsigner.FwoContext/, content
+      end
+    end
+
+    should  "respect notifications override" do
+      @generator.input = "Fwum"
+      @generator.notifications = "signals"
+      @generator.execute
+      
+      src_dir = File.join(@temp, "Fwum", "src")
+      assert_directory src_dir
+      
+      notifications_dir = File.join(src_dir, "signals")
+      assert_directory notifications_dir
+      
     end
 
   end

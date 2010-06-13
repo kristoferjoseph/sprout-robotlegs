@@ -27,31 +27,34 @@ module Robotlegs
         directory lib
         directory bin
 
-        directory package_directory do
+        directory src do
           template "#{project_name}Context.as", "RobotlegsContext.as"
           template "#{project_name}.mxml", "RobotlegsMain.mxml"
-          directory model do
-            directory proxy
-            directory vo unless shallow
-          end
 
-          directory view do
-            directory mediators
-            directory components
-            directory skins
-          end
+          directory package_directory do
 
-          directory controller do
-            directory commands
-          end
+            directory model do
+              directory proxy
+              directory vo unless shallow
+            end
 
-          directory service do
-            directory dto unless shallow
-          end
+            directory view do
+              directory mediators
+              directory components
+              directory skins
+            end
 
-          directory notifications
+            directory controller do
+              directory commands
+            end
+
+            directory service do
+              directory dto unless shallow
+            end
+
+            directory notifications
+          end
         end
-
       end
 
     end
@@ -61,10 +64,9 @@ module Robotlegs
       def project_name
         return input.camel_case
       end
-      
+
       def package_directory
         split_parts package
-        return File.join src, *package
       end
 
       def class_directory
@@ -77,12 +79,8 @@ module Robotlegs
       end
 
       def package_name
-        parts = input_in_parts
-        if parts.size > 1
-          parts.pop
-          return "#{parts.join('.')} "
-        end
-        return ""
+        parts = split_parts package
+        return "#{parts.join('.')}"
       end
 
       def class_name
@@ -93,7 +91,7 @@ module Robotlegs
       def input_in_parts
         split_parts input
       end
-      
+
       def split_parts(value)
         provided_input = value
         if provided_input.include?('/')
