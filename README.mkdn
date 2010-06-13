@@ -11,7 +11,7 @@ This bundle contains generators for creating:
 
 * Project
 * Context
-* Poxy
+* Proxy
 * Mediator
 * Command
 
@@ -23,7 +23,7 @@ This bundle contains generators for creating:
 * [git](http://git-scm.com/download)
 * [Sprouts v1-pre](http://github.com/lukebayes/project-sprouts)
 
-## Install:
+## Install
 	
 	cd robotlegs
 	gem build robotlegs.gemspec 
@@ -33,8 +33,7 @@ This bundle contains generators for creating:
 	rl-mediator SomeMediator
 	rl-command SomeCommand
 	
-	
-###TODO
+##TODO
 
 * Event
 * VO
@@ -42,7 +41,7 @@ This bundle contains generators for creating:
 * Signal
 * Signals Project
 * Signal Command
-
+	
 ## MIT License
 
 Copyright (c) 2010 Kristofer Joseph
