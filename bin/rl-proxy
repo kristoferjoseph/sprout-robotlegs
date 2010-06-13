@@ -3,6 +3,6 @@
 require 'rubygems'
 require 'robotlegs'
 
-generator = ProxyGenerator.new
+generator = Robotlegs::ProxyGenerator.new
 generator.parse! ARGV
 generator.execute

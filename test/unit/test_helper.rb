@@ -10,7 +10,7 @@ require 'sprout'
 require 'shoulda'
 require 'mocha'
 
-$:.unshift File.expand_path(File.join(File.dirname(__FILE__), '..', '..', 'lib'))
+require File.expand_path(File.join(File.dirname(__FILE__), '..', '..', 'lib', 'robotlegs'))
 $:.unshift File.expand_path(File.join(File.dirname(__FILE__), '..'))
 
 require 'sprout/generator/base'

@@ -3,6 +3,6 @@
 require 'rubygems'
 require 'robotlegs'
 
-generator = ContextGenerator.new
+generator = Robotlegs::ContextGenerator.new
 generator.parse! ARGV
 generator.execute

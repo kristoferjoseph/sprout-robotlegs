@@ -3,6 +3,6 @@
 require 'rubygems'
 require 'robotlegs'
 
-generator = MediatorGenerator.new
+generator = Robotlegs::MediatorGenerator.new
 generator.parse! ARGV
 generator.execute

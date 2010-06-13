@@ -1,10 +1,6 @@
 # -*- encoding: utf-8 -*-
 require 'sprout'
-
-lib = File.expand_path File.join(File.dirname(__FILE__), 'lib')
-$:.unshift lib unless $:.include?(lib)
-
-require 'robotlegs'
+require File.join(File.dirname(__FILE__), 'lib', 'robotlegs')
 require 'rake'
 
 Gem::Specification.new do |s|

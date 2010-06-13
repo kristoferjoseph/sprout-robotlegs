@@ -3,6 +3,6 @@
 require 'rubygems'
 require 'robotlegs'
 
-generator = CommandGenerator.new
+generator = Robotlegs::CommandGenerator.new
 generator.parse! ARGV
 generator.execute
