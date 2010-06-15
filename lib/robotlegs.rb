@@ -1,13 +1,13 @@
-require 'sprout'
+require 'as3'
 
 lib = File.expand_path File.dirname(__FILE__)
 $:.unshift lib unless $:.include?(lib)
 
-require 'generators/project_generator'
-require 'generators/context_generator'
-require 'generators/proxy_generator'
-require 'generators/mediator_generator'
-require 'generators/command_generator'
+require 'robotlegs/generators/project_generator'
+require 'robotlegs/generators/context_generator'
+require 'robotlegs/generators/proxy_generator'
+require 'robotlegs/generators/mediator_generator'
+require 'robotlegs/generators/command_generator'
 
 
 module Robotlegs  

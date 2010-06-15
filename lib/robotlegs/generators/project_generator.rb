@@ -1,19 +1,18 @@
 module Robotlegs
-  class ProjectGenerator < Sprout::Generator::Base
+  class ProjectGenerator < AS3::ProjectGenerator
 
     ##
     # Send flag shallow to prevent subdirectories vo, dto from being created
     add_param :shallow, Boolean
     add_param :package, String, { :default => ""}
-    add_param :src, String, { :default => "src" }
-    add_param :lib, String, { :default => "lib" }
-    add_param :bin, String, { :default => "bin" }
+#    add_param :src, String, { :default => "src"}
+#    add_param :lib, String, { :default => "lib"}
+#    add_param :bin, String, { :default => "bin"}
     add_param :proxy, String, { :default => "proxy" }
     add_param :vo, String, { :default => "vo" }
     add_param :view, String, { :default => "view" }
     add_param :mediators, String, { :default => "mediators" }
     add_param :components, String, { :default => "components" }
-    add_param :skins, String, { :default => "skins" }
     add_param :model, String, { :default => "model" }
     add_param :controller, String, { :default => "controller" }
     add_param :commands, String, { :default => "commands" }
