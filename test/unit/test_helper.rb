@@ -3,6 +3,7 @@ require "bundler"
 
 Bundler.setup :default, :development
 
+require 'as3'
 require 'sprout'
 # These require statments *must* be in this order:
 # http://bit.ly/bCC0Ew

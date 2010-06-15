@@ -1,15 +1,16 @@
 module Robotlegs
-  class ProjectGenerator < Sprout::Generator::Base
-    # Ideally this would extend < AS3::ProjectGenerator but the templates look up is failing by looking in the AS3 dir scope
+  class ProjectGenerator < AS3::ProjectGenerator
+    
+    ## These params below are inherited from the AS3 ProjectGenerator and are available
+    # add_param :src, String, { :default => "src"}
+    # add_param :lib, String, { :default => "lib"}
+    # add_param :bin, String, { :default => "bin"}
+    # add_param :skins, String, { :default => "skins"}
     
     ##
     # Send flag shallow to prevent subdirectories vo, dto from being created
     add_param :shallow, Boolean
-    add_param :package, String, { :default => ""}
-    add_param :src, String, { :default => "src"}
-    add_param :lib, String, { :default => "lib"}
-    add_param :bin, String, { :default => "bin"}
-    add_param :skins, String, { :default => "skins"}    
+    add_param :package, String, { :default => ""}  
     add_param :proxy, String, { :default => "proxy" }
     add_param :vo, String, { :default => "vo" }
     add_param :view, String, { :default => "view" }
