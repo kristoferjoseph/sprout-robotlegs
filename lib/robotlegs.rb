@@ -8,6 +8,7 @@ require 'robotlegs/generators/context_generator'
 require 'robotlegs/generators/proxy_generator'
 require 'robotlegs/generators/mediator_generator'
 require 'robotlegs/generators/command_generator'
+require 'robotlegs/generators/service_generator'
 
 
 module Robotlegs  

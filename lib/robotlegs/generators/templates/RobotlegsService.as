@@ -22,6 +22,7 @@ package <%= package_name %>
 		{
 			//Add any initialization here
 			//example: myArrayCollection = new ArrayCollection();
+			//Your content to assert here
 		}
 	}
 }

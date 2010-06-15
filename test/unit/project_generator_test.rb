@@ -1,6 +1,6 @@
 require File.join(File.dirname(__FILE__), "test_helper")
 
-require 'generators/project_generator'
+require 'robotlegs/generators/project_generator'
 
 class ProjectGeneratorTest < Test::Unit::TestCase
   include SproutTestCase
