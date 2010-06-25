@@ -92,6 +92,13 @@ module Robotlegs
         parts = input_in_parts
         parts.pop.camel_case
       end
+      
+      def context_package
+        if package_name != ""
+          return package_name + ".*"
+        end
+        "*"
+      end
 
       def input_in_parts
         split_parts input

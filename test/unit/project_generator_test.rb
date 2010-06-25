@@ -40,11 +40,13 @@ class ProjectGeneratorTest < Test::Unit::TestCase
 
       context_file = File.join(src_dir, "FweeContext.as")
       assert_file context_file
-
+      
       main_file = File.join(src_dir, "Fwee.mxml")
       assert_file main_file do |content|
         assert_match /FweeCompleteHandler/, content
+        assert_match /xmlns:context="*"/, content
       end
+      
 
       lib_dir = File.join(input_dir, "lib")
       assert_directory lib_dir
@@ -125,7 +127,7 @@ class ProjectGeneratorTest < Test::Unit::TestCase
       main_file = File.join(src_dir, "Fwo.mxml")
       assert_file main_file do |content|
         assert_match /FwoCompleteHandler/, content
-        assert_match /com.developsigner.FwoContext/, content
+        assert_match /com.developsigner.*/, content
       end
     end
 
