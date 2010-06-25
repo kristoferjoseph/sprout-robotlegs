@@ -123,6 +123,9 @@ class ProjectGeneratorTest < Test::Unit::TestCase
 
       package_dir = File.join(src_dir, "com", "developsigner")
       assert_directory package_dir
+      
+      context_file = File.join(package_dir, "FwoContext.as")
+      assert_file context_file
 
       main_file = File.join(src_dir, "Fwo.mxml")
       assert_file main_file do |content|

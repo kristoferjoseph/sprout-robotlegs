@@ -33,11 +33,10 @@ module Robotlegs
         directory bin
 
         directory src do
-          template "#{project_name}Context.as", "RobotlegsContext.as"
           template "#{project_name}.mxml", "RobotlegsMain.mxml"
 
           directory package_directory do
-
+          template "#{project_name}Context.as", "RobotlegsContext.as"            
             directory model do
               directory proxy
               directory vo unless shallow
