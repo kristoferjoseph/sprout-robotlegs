@@ -26,6 +26,9 @@ module Robotlegs
     def manifest
       directory project_name do
 
+        template "rakefile.rb", "RobotlegsRakefile.rb"
+        template "Gemfile", "RobotlegsGemfile.rb"
+        
         directory lib
         directory bin
 

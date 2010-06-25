@@ -25,6 +25,15 @@ class ProjectGeneratorTest < Test::Unit::TestCase
 
       input_dir = File.join(@temp, "Fwee")
       assert_directory input_dir
+      
+      rakefile = File.join(input_dir, "rakefile.rb")
+      assert_file rakefile
+      assert_file rakefile do |content|
+        assert_match /src\/Fwee.mxml/, content
+      end
+      
+      gemfile = File.join(input_dir, "Gemfile")
+      assert_file gemfile
 
       src_dir = File.join(input_dir, "src")
       assert_directory src_dir

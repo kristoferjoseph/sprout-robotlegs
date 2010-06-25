@@ -8,10 +8,8 @@
                height="768"
                backgroundColor="0xFFFFFF"
                pageTitle="<%= project_name.camel_case %>"
-               preloader=""
                usePreloader="true"
-               applicationComplete="<%= project_name.camel_case %>CompleteHandler()"
-               currentState="">
+               applicationComplete="<%= project_name.camel_case %>CompleteHandler()">
 
     <fx:Declarations>
 
