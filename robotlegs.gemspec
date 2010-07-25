@@ -1,7 +1,10 @@
 # -*- encoding: utf-8 -*-
-require 'sprout'
-require File.join(File.dirname(__FILE__), 'lib', 'robotlegs')
-require 'rake'
+lib = File.expand_path File.dirname(__FILE__), "lib"
+$:.unshift lib unless $:.include?( lib )
+
+require 'bundler'
+Bundler.require
+require 'robotlegs'
 
 Gem::Specification.new do |s|
   s.name                      = Robotlegs::NAME
@@ -15,4 +18,6 @@ Gem::Specification.new do |s|
   s.rubyforge_project         = "sprout"
   s.required_rubygems_version = ">= 1.3.6"
   s.files                     = FileList["**/*"].exclude /docs|.DS_Store|generated|.svn|.git/
+  s.add_bundler_dependencies
+  s.require_paths             << 'lib'
 end

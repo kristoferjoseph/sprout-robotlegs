@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-gem "as3", '>= 1.0.pre'
+gem "flashsdk", '>= 1.0.8.pre'
 
 group :development do
   gem "shoulda"

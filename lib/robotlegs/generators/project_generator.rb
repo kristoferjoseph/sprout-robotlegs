@@ -1,5 +1,5 @@
 module Robotlegs
-  class ProjectGenerator < AS3::ProjectGenerator
+  class ProjectGenerator < FlashSDK::ProjectGenerator
     
     ## These params below are inherited from the AS3 ProjectGenerator and are available
     # add_param :src, String, { :default => "src"}
