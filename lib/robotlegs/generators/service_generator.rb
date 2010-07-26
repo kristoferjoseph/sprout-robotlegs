@@ -1,5 +1,5 @@
 module Robotlegs
-  class ServiceGenerator < Sprout::Generator::Base
+  class ServiceGenerator < RobotlegsClassGeneratorBase
 
     ##
     # This is how you add a parameter to your generator
@@ -20,5 +20,6 @@ module Robotlegs
     def class_name
       ""
     end
+    
   end
 end

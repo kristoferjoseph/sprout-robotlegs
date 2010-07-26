@@ -1,9 +1,5 @@
 module Robotlegs
-  class MediatorGenerator < Sprout::Generator::Base
-
-    ##
-    # This is how you add a parameter to your generator
-    # add_param :fwee, String, { :default => "fwee" }
+  class MediatorGenerator < RobotlegsClassGeneratorBase
 
     def manifest
       directory input.snake_case do

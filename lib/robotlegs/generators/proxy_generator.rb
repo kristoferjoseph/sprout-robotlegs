@@ -1,10 +1,6 @@
 module Robotlegs
-  class ProxyGenerator < Sprout::Generator::Base
-
-    ##
-    # This is how you add a parameter to your generator
-    # add_param :fwee, String, { :default => "fwee" }
-
+  class ProxyGenerator < RobotlegsClassGeneratorBase
+    
     def manifest
       directory input.snake_case do
         template input.camel_case

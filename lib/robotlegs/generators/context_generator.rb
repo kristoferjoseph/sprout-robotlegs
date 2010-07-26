@@ -1,5 +1,5 @@
 module Robotlegs
-  class ContextGenerator < Sprout::Generator::Base
+  class ContextGenerator < RobotlegsClassGeneratorBase
 
     ##
     # This is how you add a parameter to your generator

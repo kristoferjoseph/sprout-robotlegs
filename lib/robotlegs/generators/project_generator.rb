@@ -6,6 +6,7 @@ module Robotlegs
     # add_param :lib, String, { :default => "lib"}
     # add_param :bin, String, { :default => "bin"}
     # add_param :skins, String, { :default => "skins"}
+    # add_param :test, String, { :default => "test"}    
     
     ##
     # Send flag shallow to prevent subdirectories vo, dto from being created
@@ -34,6 +35,7 @@ module Robotlegs
 
         directory src do
           template "#{project_name}.mxml", "RobotlegsMain.mxml"
+          template "#{test_runner_name}.mxml", "Flex4TestRunner.mxml"
 
           directory package_directory do
           template "#{project_name}Context.as", "RobotlegsContext.as"            

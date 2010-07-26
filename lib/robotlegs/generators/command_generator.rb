@@ -1,13 +1,10 @@
 module  Robotlegs
-  class CommandGenerator < Sprout::Generator::Base
-
-    ##
-    # The path where source files should be created.
-    add_param :src, String, { :default => 'src' }
+  class CommandGenerator < RobotlegsClassGeneratorBase
 
     def manifest
       directory input.snake_case do
         template "#{input.camel_case}.as", 'RobotlegsCommand.as'
+        create_test_case
       end
 
     end
@@ -51,3 +48,4 @@ module  Robotlegs
 
   end
 end
+
