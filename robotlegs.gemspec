@@ -1,10 +1,8 @@
-# -*- encoding: utf-8 -*-
-lib = File.expand_path File.dirname(__FILE__), "lib"
+lib = File.expand_path("../lib", __FILE__)
 $:.unshift lib unless $:.include?( lib )
 
-require 'bundler'
-Bundler.require
-require 'robotlegs'
+require 'robotlegs/version'
+require 'rake'
 
 Gem::Specification.new do |s|
   s.name                      = Robotlegs::NAME
@@ -15,9 +13,14 @@ Gem::Specification.new do |s|
   s.summary                   = "A library for developing Robotlegs projects with Project Sprouts"
   s.description               = "GO AND CODE"
   s.executables               = ["rl-project","rl-context","rl-proxy","rl-mediator","rl-command","rl-service"]
-  s.rubyforge_project         = "sprout"
+
   s.required_rubygems_version = ">= 1.3.6"
-  s.files                     = FileList["**/*"].exclude /docs|.DS_Store|generated|.svn|.git/
-  s.add_bundler_dependencies
+  s.files                     = FileList["**/*"].exclude /docs|.DS_Store|generated|.svn|.git|vendor/
+    
+  s.add_dependency "flashsdk", '>= 1.0.8.pre'
+  s.add_development_dependency "shoulda"
+  s.add_development_dependency "mocha"
+  s.add_development_dependency "rcov"
+  
   s.require_paths             << 'lib'
 end
