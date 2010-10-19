@@ -10,7 +10,7 @@ require 'robotlegs/generators/service_generator'
 
 module Robotlegs  
   NAME    = 'robotlegs'
-  VERSION = '1.1.1.pre'
+  VERSION = '1.1.2.pre'
 end
 
 Sprout::Specification.new do |s|
