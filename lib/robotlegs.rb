@@ -12,7 +12,7 @@ module Robotlegs
   NAME    = 'robotlegs'
   VERSION = '1.1.3.pre'
   ZIP_VERSION = '1.4.0'
-  ZIP_MD5 = '48ce7343e8d004c3bc9e335dc0c2f190'
+  ZIP_MD5 = '2c0962ea2f5e9665d1ac8951c7448b95'
 end
 
 Sprout::Specification.new do |s|
