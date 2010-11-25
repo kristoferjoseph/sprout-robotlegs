@@ -14,10 +14,10 @@ Gem::Specification.new do |s|
   s.description               = "GO AND CODE"
   s.executables               = ["rl-project","rl-context","rl-proxy","rl-mediator","rl-command","rl-service"]
 
-  s.required_rubygems_version = ">= 1.3.6"
+  s.required_rubygems_version = ">= 1.3.7"
   s.files                     = FileList["**/*"].exclude /docs|.DS_Store|generated|.svn|.git|vendor/
     
-  s.add_dependency "flashsdk", '>= 1.0.8.pre'
+  s.add_dependency "flashsdk", '>= 1.0.13.pre'
   s.add_development_dependency "shoulda"
   s.add_development_dependency "mocha"
   s.add_development_dependency "rcov"

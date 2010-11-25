@@ -10,8 +10,8 @@ require 'robotlegs/generators/service_generator'
 
 module Robotlegs  
   NAME    = 'robotlegs'
-  VERSION = '1.1.2.pre'
-  ZIP_VERSION = '1.3.0'
+  VERSION = '1.1.3.pre'
+  ZIP_VERSION = '1.4.0'
   ZIP_MD5 = '48ce7343e8d004c3bc9e335dc0c2f190'
 end
 
