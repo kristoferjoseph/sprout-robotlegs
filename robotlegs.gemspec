@@ -2,6 +2,7 @@
 lib = File.expand_path("../lib", __FILE__)
 $:.unshift lib unless $:.include?( lib )
 
+require 'bundler'
 require 'robotlegs'
 
 Gem::Specification.new do |s|
@@ -16,11 +17,8 @@ Gem::Specification.new do |s|
   s.rubyforge_project         = "sprout-robotlegs"
   s.required_rubygems_version = ">= 1.3.7"
   s.files                     = FileList["**/*"].exclude /docs|.DS_Store|generated|.svn|.git|vendor/
-    
-  s.add_dependency "flashsdk", '>= 1.0.13.pre'
-  s.add_development_dependency "shoulda"
-  s.add_development_dependency "mocha"
-  s.add_development_dependency "rcov"
+
+  s.add_bundler_dependencies
   
   s.require_paths             << 'lib'
 end

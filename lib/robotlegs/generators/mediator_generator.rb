@@ -1,11 +1,24 @@
 module Robotlegs
-  class MediatorGenerator < RobotlegsClassGeneratorBase
+  class MediatorGenerator < FlashSDK::ClassGenerator
 
     def manifest
-      directory input.snake_case do
-        template input.camel_case
+      if(!input.match(/Test$/))
+        directory mediator_directory do
+          template "#{class_name}.as", 'RobotlegsMediator.as'
+        end
       end
 
+      unless no_test
+        generator :test_class, :input => "#{fully_qualified_class_name}Test"
+      end
+    end
+    
+    def mediator_directory
+      package_directory << "view" << "mediators"
+    end
+    
+    def mediator_package
+      default_package_name << ".view" << ".mediators"
     end
 
   end

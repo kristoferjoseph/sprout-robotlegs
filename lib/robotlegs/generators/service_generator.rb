@@ -4,7 +4,7 @@ module Robotlegs
     def manifest
       if(!input.match(/Test$/))
         directory service_directory do
-          template "#{class_name}Service.as", 'RobotlegsService.as'
+          template "#{class_name}.as", 'RobotlegsService.as'
         end
       end
 

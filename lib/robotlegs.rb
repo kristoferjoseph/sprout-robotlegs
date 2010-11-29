@@ -1,7 +1,6 @@
 require 'flashsdk'
 
 require 'robotlegs/module'
-require 'robotlegs/generators/robotlegs_class_generator_base'
 require 'robotlegs/generators/project_generator'
 require 'robotlegs/generators/context_generator'
 require 'robotlegs/generators/proxy_generator'

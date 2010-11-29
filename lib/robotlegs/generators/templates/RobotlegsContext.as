@@ -1,17 +1,17 @@
-package <%= package_name %>
+package <%= default_package_name %>
 {
 	import flash.display.DisplayObjectContainer;
 	
 	import org.robotlegs.mvcs.Context;
 	import org.robotlegs.base.ContextEvent;
 	
-	public class <%= class_name %>Context extends Context
+	public class <%= class_name %> extends Context
 	{
 		//---------------------------------------
 		// CONSTRUCTOR
 		//---------------------------------------
 		
-		public function <%= class_name %>Context(contextView:DisplayObjectContainer=null, autoStartup:Boolean=true)
+		public function <%= class_name %>(contextView:DisplayObjectContainer=null, autoStartup:Boolean=true)
 		{
 			super(contextView,autoStartup);
 		}

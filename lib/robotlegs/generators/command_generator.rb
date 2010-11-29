@@ -1,51 +1,26 @@
 module  Robotlegs
-  class CommandGenerator < RobotlegsClassGeneratorBase
+  class CommandGenerator < FlashSDK::ClassGenerator
 
     def manifest
-      directory input.snake_case do
-        template "#{input.camel_case}.as", 'RobotlegsCommand.as'
-        create_test_case
+      if(!input.match(/Test$/))
+        directory command_directory do
+          template "#{class_name}.as", 'RobotlegsCommand.as'
+        end
       end
 
-    end
-
-    def class_directory
-      parts = input_in_parts
-      if parts.size > 1
-        parts.pop
-        return File.join src, *parts
+      unless no_test
+        generator :test_class, :input => "#{fully_qualified_class_name}Test"
       end
-      return src
     end
-
-    def package_name
-      parts = input_in_parts
-      if parts.size > 1
-        parts.pop
-        return "#{parts.join('.')} "
-      end
-      return ""
+    
+    def command_directory
+      package_directory << "controller" << "commands"
     end
-
-    def class_name
-      parts = input_in_parts
-      parts.pop.camel_case
+    
+    def command_package
+      default_package_name << ".controller" << ".commands"
     end
-
-    def input_in_parts
-      provided_input = input
-      if provided_input.include?('/')
-        provided_input.gsub! /^#{src}\//, ''
-        provided_input = provided_input.split('/').join('.')
-      end
-
-      provided_input.gsub!(/\.as$/, '')
-      provided_input.gsub!(/\.mxml$/, '')
-      provided_input.gsub!(/\.xml$/, '')
-
-      provided_input.split('.')
-    end
-
+    
   end
 end
 

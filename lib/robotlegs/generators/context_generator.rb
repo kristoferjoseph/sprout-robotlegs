@@ -1,16 +1,17 @@
 module Robotlegs
-  class ContextGenerator < RobotlegsClassGeneratorBase
-
-    ##
-    # This is how you add a parameter to your generator
-    # add_param :fwee, String, { :default => "fwee" }
+  class ContextGenerator < FlashSDK::ClassGenerator
 
     def manifest
-      directory input.snake_case do
-        template input.camel_case
+      if(!input.match(/Test$/))
+        directory package_directory do
+          template "#{class_name}.as", 'RobotlegsContext.as'
+        end
       end
 
+      unless no_test
+        generator :test_class, :input => "#{fully_qualified_class_name}Test"
+      end
     end
-
+    
   end
 end

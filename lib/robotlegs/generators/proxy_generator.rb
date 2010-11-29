@@ -1,11 +1,24 @@
 module Robotlegs
-  class ProxyGenerator < RobotlegsClassGeneratorBase
+  class ProxyGenerator < FlashSDK::ClassGenerator
     
     def manifest
-      directory input.snake_case do
-        template input.camel_case
+      if(!input.match(/Test$/))
+        directory proxy_directory do
+          template "#{class_name}.as", 'RobotlegsProxy.as'
+        end
       end
 
+      unless no_test
+        generator :test_class, :input => "#{fully_qualified_class_name}Test"
+      end
+    end
+    
+    def proxy_directory
+      package_directory << "model" << "proxy"
+    end
+    
+    def proxy_package
+      default_package_name << ".model" << ".proxy"
     end
 
   end

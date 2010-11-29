@@ -8,7 +8,7 @@ library :robotlegs, :swc
 # Configure
 
 def configure_mxmlc t
-  t.library_path << 'lib/robotlegs/robotlegs-framework-v1.1.2.swc'
+  t.library_path << 'lib/robotlegs/robotlegs-framework-v<%= Robotlegs::ZIP_VERSION %>.swc'
 end
 
 ##############################
@@ -33,7 +33,7 @@ library :asunit4
 mxmlc "<%= bin %>/<%= test_swf_name %>" => :asunit4 do |t|
   configure_mxmlc t
   t.input = "<%= src %>/<%= test_runner_name %>.mxml"
-  t.library_path << "lib/asunit4/AsUnit-4.2.2.pre.swc"
+  t.library_path << "lib/asunit4/AsUnit-4.2.1.pre.swc"
   t.source_path << "test"
   t.default_size = "900,550"
   t.debug = true

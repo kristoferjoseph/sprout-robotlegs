@@ -20,7 +20,7 @@ class ServiceGeneratorTest < Test::Unit::TestCase
     end
 
     should "generate a new Service" do
-      @generator.input = "Noodle"
+      @generator.input = "NoodleService"
       @generator.package = "com.foo.bar"
       @generator.execute
       
@@ -30,7 +30,7 @@ class ServiceGeneratorTest < Test::Unit::TestCase
       input_file = File.join(input_dir, "NoodleService.as")
       assert_file input_file do |content|
         assert_match /com.foo.bar.service/, content
-        assert_match /Noodle/, content
+        assert_match /NoodleService/, content
       end
 
     end

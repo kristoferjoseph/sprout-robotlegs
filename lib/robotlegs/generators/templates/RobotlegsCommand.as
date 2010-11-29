@@ -1,4 +1,4 @@
-package <%= package_name %>
+package <%= command_package %>
 {
 	import org.robotlegs.mvcs.Command;
 	
