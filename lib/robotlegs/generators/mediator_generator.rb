@@ -1,6 +1,7 @@
 module Robotlegs
   class MediatorGenerator < FlashSDK::ClassGenerator
-
+    include RobotlegsHelper
+    
     def manifest
       if(!input.match(/Test$/))
         directory mediator_directory do
@@ -17,7 +18,7 @@ module Robotlegs
       [] << src << package_directory << "view" << "mediators"
     end
     
-    def mediator_package
+    def package_name
       default_package_name << ".view" << ".mediators"
     end
 

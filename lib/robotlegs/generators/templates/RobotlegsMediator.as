@@ -1,4 +1,4 @@
-package <%= mediator_package %>
+package <%= package_name %>
 {	
 	import org.robotlegs.mvcs.Mediator;
 	

@@ -1,6 +1,7 @@
 module  Robotlegs
   class CommandGenerator < FlashSDK::ClassGenerator
-
+    include RobotlegsHelper
+    
     def manifest
       if(!input.match(/Test$/))
         directory command_directory do
@@ -14,13 +15,14 @@ module  Robotlegs
     end
     
     def command_directory
-      [] << src << package_directory << "controller" << "commands"
+      src_array = [] << src
+      src_array += package_directory.dup << "controller" << "commands"
     end
     
-    def command_package
-      default_package_name << ".controller" << ".commands"
+    def package_name
+      default_package_name.dup << ".controller" << ".commands"
     end
-    
+        
   end
 end
 

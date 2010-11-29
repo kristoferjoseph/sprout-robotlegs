@@ -14,8 +14,9 @@ module Robotlegs
     end
     
     def context_directory
-      [] << src << package_directory
+      src_array = [] << src
+      src_array += package_directory
     end
-    
+
   end
 end

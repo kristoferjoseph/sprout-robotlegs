@@ -1,4 +1,4 @@
-package <%= proxy_package %>
+package <%= package_name %>
 {	
 	import org.robotlegs.mvcs.Actor;
 	

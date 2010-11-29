@@ -1,6 +1,7 @@
 module Robotlegs
   class ServiceGenerator < FlashSDK::ClassGenerator
-
+    include RobotlegsHelper
+    
     def manifest
       if(!input.match(/Test$/))
         directory service_directory do
@@ -17,7 +18,7 @@ module Robotlegs
       [] << src << package_directory << 'service'
     end
     
-    def service_package
+    def package_name
       default_package_name << '.service'
     end
     

@@ -1,5 +1,6 @@
 module Robotlegs
   class ProxyGenerator < FlashSDK::ClassGenerator
+    include RobotlegsHelper
     
     def manifest
       if(!input.match(/Test$/))
@@ -17,7 +18,7 @@ module Robotlegs
       [] << src << package_directory << "model" << "proxy"
     end
     
-    def proxy_package
+    def package_name
       default_package_name << ".model" << ".proxy"
     end
 
