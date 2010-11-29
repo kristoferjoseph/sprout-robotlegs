@@ -26,9 +26,14 @@ This bundle contains generators for creating:
 
 ## Install
 	
-	cd robotlegs
+	git clone [this repo]
+	cd sprout-robotlegs
 	gem build robotlegs.gemspec 
     gem install robotlegs-1.3.0.5.pre.gem
+    
+####OR
+    
+    gem install robotlegs --pre
     
 ## Usage
     
@@ -46,7 +51,25 @@ This bundle contains generators for creating:
 	
 	Service Generator
 	rl-service SomeService --package=com.foo
-	
+
+##DEVELOPMENT	
+
+####If you want to aid in the development of this gem:
+    fork this repo
+    git clone [your fork]
+	cd sprout-robotlegs
+	bundle install
+	rake test
+	do code in the interface hard
+    rake test
+	gem build robotlegs.gemspec 
+    gem install robotlegs
+    try it out rl-project SomeProject --package=com.foo
+    send pull request
+    I will merge your changes
+    I will increment the version and push the gem
+    I will send you a present that you will like
+    
 ##TODO
 
 * Event
