@@ -91,7 +91,6 @@ This bundle contains generators for creating:
 * VO
 * DTO
 
-
 	
 ## MIT License
 
