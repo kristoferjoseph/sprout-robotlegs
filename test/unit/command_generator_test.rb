@@ -22,7 +22,7 @@ class CommandGeneratorTest < Test::Unit::TestCase
       @generator.package = "com.foo.bar"
       @generator.execute
       
-      input_dir = File.join(@temp, "com", "foo", "bar", "controller", "commands")
+      input_dir = File.join(@temp, "src", "com", "foo", "bar", "controller", "commands")
       assert_directory input_dir
       
       input_file = File.join(input_dir, "PoodleCommand.as")

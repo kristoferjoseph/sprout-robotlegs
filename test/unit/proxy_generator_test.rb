@@ -22,7 +22,7 @@ class ProxyGeneratorTest < Test::Unit::TestCase
       @generator.package = "com.foo.bar"
       @generator.execute
       
-      input_dir = File.join(@temp, "com", "foo", "bar", "model", "proxy")
+      input_dir = File.join(@temp, "src", "com", "foo", "bar", "model", "proxy")
       assert_directory input_dir
       
       input_file = File.join(input_dir, "UserProxy.as")

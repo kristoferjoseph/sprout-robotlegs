@@ -1,7 +1,5 @@
 require 'test_helper'
 
-require 'robotlegs/generators/service_generator'
-
 class ServiceGeneratorTest < Test::Unit::TestCase
   include SproutTestCase
 
@@ -24,7 +22,7 @@ class ServiceGeneratorTest < Test::Unit::TestCase
       @generator.package = "com.foo.bar"
       @generator.execute
       
-      input_dir = File.join(@temp, "com", "foo", "bar", "service")
+      input_dir = File.join(@temp, "src", "com", "foo", "bar", "service")
       assert_directory input_dir
       
       input_file = File.join(input_dir, "NoodleService.as")

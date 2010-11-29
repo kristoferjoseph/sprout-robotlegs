@@ -14,7 +14,7 @@ module Robotlegs
     end
     
     def service_directory
-      package_directory << 'service'
+      [] << src << package_directory << 'service'
     end
     
     def service_package

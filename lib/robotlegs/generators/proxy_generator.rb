@@ -14,7 +14,7 @@ module Robotlegs
     end
     
     def proxy_directory
-      package_directory << "model" << "proxy"
+      [] << src << package_directory << "model" << "proxy"
     end
     
     def proxy_package

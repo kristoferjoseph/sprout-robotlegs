@@ -22,7 +22,7 @@ class MediatorGeneratorTest < Test::Unit::TestCase
       @generator.package = "com.foo.bar"
       @generator.execute
       
-      input_dir = File.join(@temp, "com", "foo", "bar", "view", "mediators")
+      input_dir = File.join(@temp, "src", "com", "foo", "bar", "view", "mediators")
       assert_directory input_dir
       
       input_file = File.join(input_dir, "SasafrassMediator.as")

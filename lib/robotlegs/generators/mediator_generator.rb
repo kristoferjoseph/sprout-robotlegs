@@ -14,7 +14,7 @@ module Robotlegs
     end
     
     def mediator_directory
-      package_directory << "view" << "mediators"
+      [] << src << package_directory << "view" << "mediators"
     end
     
     def mediator_package

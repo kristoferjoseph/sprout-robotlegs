@@ -14,7 +14,7 @@ module  Robotlegs
     end
     
     def command_directory
-      package_directory << "controller" << "commands"
+      [] << src << package_directory << "controller" << "commands"
     end
     
     def command_package
