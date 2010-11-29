@@ -28,7 +28,7 @@ This bundle contains generators for creating:
 	
 	cd robotlegs
 	gem build robotlegs.gemspec 
-    gem install robotlegs-1.0.pre.gem
+    gem install robotlegs-1.3.0.5.pre.gem
     
 ## Usage
     
