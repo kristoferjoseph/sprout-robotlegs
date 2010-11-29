@@ -14,6 +14,7 @@ This bundle contains generators for creating:
 * Proxy
 * Mediator
 * Command
+* Service
 
 
 ## Prerequisites
@@ -28,10 +29,23 @@ This bundle contains generators for creating:
 	cd robotlegs
 	gem build robotlegs.gemspec 
     gem install robotlegs-1.0.pre.gem
-    rl-project SomeProject
-	rl-proxy SomeProxy
-	rl-mediator SomeMediator
-	rl-command SomeCommand
+    
+## Usage
+    
+    Project Generator
+    rl-project SomeProject --package=com.foo [ --shallow ]
+    
+    Proxy Generator
+	rl-proxy SomeProxy --package=com.foo
+	
+	Mediator Generator
+	rl-mediator SomeMediator --package=com.foo
+	
+	Command Generator
+	rl-command SomeCommand --package=com.foo
+	
+	Service Generator
+	rl-service SomeService --package=com.foo
 	
 ##TODO
 
@@ -41,6 +55,7 @@ This bundle contains generators for creating:
 * Signal
 * Signals Project
 * Signal Command
+* as3 Only Project
 	
 ## MIT License
 
