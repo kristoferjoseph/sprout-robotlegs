@@ -11,7 +11,6 @@ module Robotlegs
     ##
     # Send flag shallow to prevent subdirectories vo, dto from being created
     add_param :shallow, Boolean
-    add_param :package, String, { :default => ""}  
     add_param :proxy, String, { :default => "proxy" }
     add_param :vo, String, { :default => "vo" }
     add_param :view, String, { :default => "view" }
@@ -67,57 +66,12 @@ module Robotlegs
 
     protected
 
-      def project_name
-        return input.camel_case
-      end
-
-      def package_directory
-        split_parts package
-      end
-
-      def class_directory
-        parts = input_in_parts
-        if parts.size > 1
-          parts.pop
-          return File.join src, *parts
-        end
-        return src
-      end
-
-      def package_name
-        parts = split_parts package
-        return "#{parts.join('.')}"
-      end
-
-      def class_name
-        parts = input_in_parts
-        parts.pop.camel_case
-      end
-      
       def context_package
-        if package_name != ""
-          return package_name + ".*"
+        if default_package_name != ""
+          return default_package_name + ".*"
         end
         "*"
       end
-
-      def input_in_parts
-        split_parts input
-      end
-
-      def split_parts(value)
-        provided_input = value
-        if provided_input.include?('/')
-          provided_input.gsub! /^#{src}\//, ''
-          provided_input = provided_input.split('/').join('.')
-        end
-
-        provided_input.gsub!(/\.as$/, '')
-        provided_input.gsub!(/\.mxml$/, '')
-        provided_input.gsub!(/\.xml$/, '')
-
-        provided_input.split('.')
-      end
-
+      
   end
 end

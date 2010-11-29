@@ -1,4 +1,4 @@
-package <%= package_name %>
+package <%= service_package %>
 {	
 	import org.robotlegs.mvcs.Actor;
 	

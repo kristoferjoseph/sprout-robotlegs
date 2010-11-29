@@ -1,24 +1,24 @@
 module Robotlegs
-  class ServiceGenerator < RobotlegsClassGeneratorBase
-
-    ##
-    # This is how you add a parameter to your generator
-    # add_param :fwee, String, { :default => "fwee" }
-    add_param :package, String, { :default => "com.foo" }
+  class ServiceGenerator < FlashSDK::ClassGenerator
 
     def manifest
-      directory input.snake_case do
-        template "#{input.camel_case}Service.as", "RobotlegsService.as"
+      if(!input.match(/Test$/))
+        directory service_directory do
+          template "#{class_name}Service.as", 'RobotlegsService.as'
+        end
       end
 
+      unless no_test
+        generator :test_class, :input => "#{fully_qualified_class_name}Test"
+      end
     end
-
-    def package_name
-      package
+    
+    def service_directory
+      package_directory << 'service'
     end
-
-    def class_name
-      ""
+    
+    def service_package
+      default_package_name << '.service'
     end
     
   end

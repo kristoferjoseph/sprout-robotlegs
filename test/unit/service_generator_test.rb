@@ -20,16 +20,18 @@ class ServiceGeneratorTest < Test::Unit::TestCase
     end
 
     should "generate a new Service" do
-      @generator.input = "Service"
+      @generator.input = "Noodle"
+      @generator.package = "com.foo.bar"
       @generator.execute
-      # 
-      # input_dir = File.join(@temp, "service")
-      # assert_directory input_dir
-      # 
-      # input_file = File.join(input_dir, "RobotlegsService.as")
-      # assert_file input_file do |content|
-      #   assert_matches /Your content to assert here/, content
-      # end
+      
+      input_dir = File.join(@temp, "com", "foo", "bar", "service")
+      assert_directory input_dir
+      
+      input_file = File.join(input_dir, "NoodleService.as")
+      assert_file input_file do |content|
+        assert_match /com.foo.bar.service/, content
+        assert_match /Noodle/, content
+      end
 
     end
 
