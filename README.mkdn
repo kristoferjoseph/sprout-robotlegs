@@ -20,6 +20,7 @@ This bundle contains generators for creating:
 ## Prerequisites
 
 * [Ruby](http://www.ruby-lang.org/)
+* [rvm](http://rvm.beginrescueend.com/) < rvm will save you a ton of permissions headaches.
 * [Ruby Gems](http://rubygems.org/pages/download)
 * [git](http://git-scm.com/download)
 * [Sprouts v1-pre](http://github.com/lukebayes/project-sprouts)
