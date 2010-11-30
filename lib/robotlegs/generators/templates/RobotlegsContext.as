@@ -5,13 +5,13 @@ package <%= package %>
 	import org.robotlegs.mvcs.Context;
 	import org.robotlegs.base.ContextEvent;
 	
-	public class <%= class_name %> extends Context
+	public class <%= class_name %>Context extends Context
 	{
 		//---------------------------------------
 		// CONSTRUCTOR
 		//---------------------------------------
 		
-		public function <%= class_name %>(contextView:DisplayObjectContainer=null, autoStartup:Boolean=true)
+		public function <%= class_name %>Context(contextView:DisplayObjectContainer=null, autoStartup:Boolean=true)
 		{
 			super(contextView,autoStartup);
 		}
