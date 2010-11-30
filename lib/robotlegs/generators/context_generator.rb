@@ -1,6 +1,7 @@
 module Robotlegs
   class ContextGenerator < FlashSDK::ClassGenerator
-
+    include RobotlegsHelper
+    
     def manifest
       if(!input.match(/Test$/))
         directory context_directory do
@@ -17,6 +18,10 @@ module Robotlegs
       src_array = [] << src
       src_array += package_directory
     end
-
+    
+    def package_name
+      default_package_name.dup
+    end
+    
   end
 end

@@ -1,4 +1,4 @@
-module Robotlegs  
+module Robotlegs
   NAME    = 'robotlegs'
   ZIP_VERSION = '1.4.0'
   ZIP_MD5 = '2c0962ea2f5e9665d1ac8951c7448b95'

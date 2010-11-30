@@ -15,11 +15,12 @@ module Robotlegs
     end
     
     def service_directory
-      [] << src << package_directory << 'service'
+      src_array = [] << src
+      src_array += package_directory << 'service'
     end
     
     def package_name
-      default_package_name << '.service'
+      default_package_name.dup << '.service'
     end
     
   end

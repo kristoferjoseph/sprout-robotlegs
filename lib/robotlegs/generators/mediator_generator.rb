@@ -15,11 +15,12 @@ module Robotlegs
     end
     
     def mediator_directory
-      [] << src << package_directory << "view" << "mediators"
+      src_array = [] << src
+      src_array << package_directory.dup << "view" << "mediators"
     end
     
     def package_name
-      default_package_name << ".view" << ".mediators"
+      default_package_name.dup << ".view" << ".mediators"
     end
 
   end

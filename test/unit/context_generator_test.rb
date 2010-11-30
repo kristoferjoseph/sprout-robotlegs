@@ -22,6 +22,10 @@ class ContextGeneratorTest < Test::Unit::TestCase
       @generator.package = "com.foo.bar"
       @generator.execute
       
+      # Testing that these methods can be called more than once and not maniuplate the underlying variables
+      assert_equal("com.foo.bar", @generator.package_name);
+      assert_equal("com.foo.bar", @generator.package_name);      
+      
       input_dir = File.join(@temp, "src", "com", "foo", "bar")
       assert_directory input_dir
       
@@ -30,6 +34,10 @@ class ContextGeneratorTest < Test::Unit::TestCase
         assert_match /com.foo.bar/, content
         assert_match /BrainwashContext/, content
       end
+      
+      # Testing that these methods can be called more than once and not maniuplate the underlying variables      
+      assert_equal("com.foo.bar.BrainwashContext", @generator.fully_qualified_class_name)
+      assert_equal("com.foo.bar.BrainwashContext", @generator.fully_qualified_class_name)
 
     end
 

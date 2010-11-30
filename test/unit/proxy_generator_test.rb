@@ -22,6 +22,10 @@ class ProxyGeneratorTest < Test::Unit::TestCase
       @generator.package = "com.foo.bar"
       @generator.execute
       
+      # Testing that these methods can be called more than once and not maniuplate the underlying variables
+      assert_equal("com.foo.bar.model.proxy", @generator.package_name);
+      assert_equal("com.foo.bar.model.proxy", @generator.package_name);
+            
       input_dir = File.join(@temp, "src", "com", "foo", "bar", "model", "proxy")
       assert_directory input_dir
       
@@ -30,7 +34,11 @@ class ProxyGeneratorTest < Test::Unit::TestCase
         assert_match /com.foo.bar.model.proxy/, content
         assert_match /UserProxy/, content
       end
-
+      
+      # Testing that these methods can be called more than once and not maniuplate the underlying variables
+      assert_equal("com.foo.bar.model.proxy.UserProxy", @generator.fully_qualified_class_name)
+      assert_equal("com.foo.bar.model.proxy.UserProxy", @generator.fully_qualified_class_name)      
+      
     end
 
   end

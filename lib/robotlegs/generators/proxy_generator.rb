@@ -15,11 +15,12 @@ module Robotlegs
     end
     
     def proxy_directory
-      [] << src << package_directory << "model" << "proxy"
+      src_array = [] << src
+      src_array += package_directory.dup << "model" << "proxy"
     end
     
     def package_name
-      default_package_name << ".model" << ".proxy"
+      default_package_name.dup << ".model" << ".proxy"
     end
 
   end
