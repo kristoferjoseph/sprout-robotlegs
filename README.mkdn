@@ -23,12 +23,14 @@ This bundle contains generators for creating:
 * [rvm](http://rvm.beginrescueend.com/) < rvm will save you a ton of permissions headaches.
 * [Ruby Gems](http://rubygems.org/pages/download)
 * [git](http://git-scm.com/download)
+* [bundler](http://gembundler.com/) < gem install bundler
 * [Sprouts v1-pre](http://github.com/lukebayes/project-sprouts)
 
 ## Install
 	
 	git clone [this repo]
 	cd sprout-robotlegs
+	bundle install
 	gem build robotlegs.gemspec 
     gem install robotlegs-1.3.0.5.pre.gem
     

@@ -2,6 +2,8 @@
 
 require 'rubygems'
 require 'robotlegs'
+require 'bundler'
+Bundler.require
 
 generator = Robotlegs::MediatorGenerator.new
 generator.parse! ARGV
