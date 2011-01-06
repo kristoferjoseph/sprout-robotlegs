@@ -15,4 +15,4 @@ $:.unshift File.expand_path(File.join(File.dirname(__FILE__), '..'))
 
 require 'robotlegs'
 require 'flashsdk'
-require 'sprout/test/sprout_test_case'
+require 'sprout/test_helper'

@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class ServiceGeneratorTest < Test::Unit::TestCase
-  include SproutTestCase
+  include Sprout::TestHelper
 
   context "A new Service generator" do
 

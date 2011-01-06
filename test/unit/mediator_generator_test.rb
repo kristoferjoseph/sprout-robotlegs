@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class MediatorGeneratorTest < Test::Unit::TestCase
-  include SproutTestCase
+  include Sprout::TestHelper
 
   context "A new Mediator generator" do
 

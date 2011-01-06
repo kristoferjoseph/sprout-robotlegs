@@ -9,7 +9,7 @@ module Robotlegs
         end
       end
 
-      unless no_test
+      if test_class
         generator :test_class, :input => "#{fully_qualified_class_name}Test"
       end
     end

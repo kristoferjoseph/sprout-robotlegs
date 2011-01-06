@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class CommandGeneratorTest < Test::Unit::TestCase
-  include SproutTestCase
+  include Sprout::TestHelper
 
   context "A new Command generator" do
 
