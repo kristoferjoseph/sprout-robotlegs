@@ -2,8 +2,6 @@
 
 require 'rubygems'
 require 'robotlegs'
-require 'bundler'
-Bundler.require
 
 generator = Robotlegs::ProxyGenerator.new
 generator.parse! ARGV
