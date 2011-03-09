@@ -10,7 +10,7 @@ module  Robotlegs
       end
 
       if test_class
-        generator :test_class, :input => "#{fully_qualified_class_name}Test"
+        generator :test_class, :input => "#{fully_qualified_class_name}Test", :force => true
       end
     end
     
