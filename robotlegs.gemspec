@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.homepage                  = "http://projectsprouts.org"
   s.summary                   = "A library for developing Robotlegs projects with Project Sprouts"
   s.description               = "GO AND CODE"
-  s.executables               = ["rl-project","rl-context","rl-proxy","rl-mediator","rl-command","rl-service","rl-signal-command"]
+  s.executables               = ["rl-project","rl-context","rl-proxy","rl-mediator","rl-command","rl-service","rl-signal-command","rl-signal-context"]
   s.rubyforge_project         = "sprout-robotlegs"
   s.required_rubygems_version = ">= 1.3.7"
   s.files                     = FileList["**/*"].exclude /docs|.DS_Store|generated|.svn|.git|vendor/

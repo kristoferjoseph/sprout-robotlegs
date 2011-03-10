@@ -11,9 +11,11 @@ This bundle contains generators for creating:
 
 * Project
 * Context
+* SignalContext
 * Proxy
 * Mediator
 * Command
+* SignalCommand
 * Service
 
 
@@ -90,7 +92,6 @@ This bundle contains generators for creating:
 * Event
 * Signal
 * Signals Project
-* Signal Command
 * VO
 * DTO
 
