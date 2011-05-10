@@ -1,4 +1,4 @@
-# Project Sprouts Robotlegs Gem _*Pre-Alpha_
+# Project Sprouts Robotlegs Gem _Beta_
 
 This RubyGem contains templates and libraries for developing [Robotlegs](http://www.robotlegs.org/) based MVCS DI applications in Actionscript 3.0 and Flex 4.0  
 
@@ -77,23 +77,8 @@ This bundle contains generators for creating:
     
 ##Todo
 ####In prioritized order
-###Generators
 
-* Split rl-project into three executables
-    1. rl-flex-project
-    
-        flex\_project_generator.rb
-    2. rl-as3-project
-    
-        as3\_project_generator.rb
-    3. rl-air-project
-    
-        air\_project_generator.rb
-* Event
-* Signal
-* Signals Project
-* VO
-* DTO
+ * Add project model to store information such as default package and user project overrides
 
 	
 ## MIT License
