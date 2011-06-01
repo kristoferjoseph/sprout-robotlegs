@@ -56,6 +56,12 @@ This bundle contains generators for creating:
 	
 	Service Generator
 	rl-service SomeService --package=com.foo
+	
+	View with Mediator (mxml)
+	rl-view-with-mediator --package=com.foo
+	
+	View with Mediator (as)
+	rl-view-with-mediator --package=com.foo --no-mxml
 
 ##Development	
 

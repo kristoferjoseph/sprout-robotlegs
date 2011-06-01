@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'robotlegs'
+require 'bundler'
+Bundler.require
+
+generator = Robotlegs::ViewWithMediatorTestcaseGenerator.new
+generator.parse! ARGV
+generator.execute
