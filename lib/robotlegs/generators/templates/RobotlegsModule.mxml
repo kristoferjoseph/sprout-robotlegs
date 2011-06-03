@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Module xmlns:fx="http://ns.adobe.com/mxml/2009"
+          xmlns:s="library://ns.adobe.com/flex/spark"
+          implements="org.robotlegs.utilities.modular.core.IModule"
+          height="100%"
+          width="100%">
+    <s:layout>
+        <s:BasicLayout/>
+    </s:layout>
+    <fx:Script>
+		<![CDATA[
+        import mx.core.IVisualElementContainer;
+
+        import org.robotlegs.core.IInjector;
+        import org.robotlegs.utilities.modular.core.IModuleContext;
+
+        protected var context:IModuleContext;
+
+        /**
+         * We need to initialize our context by setting the parent
+         * injector for the module. This is actually injected by the
+         * shell, so no need to worry about it!
+         */
+        [Inject]
+        public function set parentInjector(value:IInjector):void
+        {
+            context=new <%= class_name %>(this, value);
+        }
+
+        public function dispose():void
+        {
+            if(parent&&parent.contains(this))
+                IVisualElementContainer(parent).removeElement(this);
+            context.dispose();
+            context=null;
+        }
+        ]]>
+	</fx:Script>
+</s:Module>
