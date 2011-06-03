@@ -62,6 +62,12 @@ This bundle contains generators for creating:
 	
 	View with Mediator (as)
 	rl-view-with-mediator --package=com.foo --no-mxml
+	
+	Spark Module (mxml)
+	rl-module CustomModule --package=com.foo.custommodule
+	
+	Sprite Module (as)
+	rl-module CustomModule --package=com.foo.custommodule --no-mxml
 
 ##Development	
 
