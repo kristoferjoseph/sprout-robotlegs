@@ -18,7 +18,8 @@ Gem::Specification.new do |s|
                                 "rl-signal-context","rl-view-with-mediator",
                                 "rl-view-with-mediator-testcase",
                                 "rl-module",
-                                "rl-module-mediator-testcase"]
+                                "rl-module-mediator-testcase",
+                                "rl-module-project"]
   s.rubyforge_project         = "sprout-robotlegs"
   s.required_rubygems_version = ">= 1.3.7"
   s.files                     = FileList["**/*"].exclude /docs|.DS_Store|generated|.svn|.git|vendor/
