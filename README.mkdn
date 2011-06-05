@@ -58,16 +58,16 @@ This bundle contains generators for creating:
 	rl-service SomeService --package=com.foo
 	
 	View with Mediator (mxml)
-	rl-view-with-mediator --package=com.foo
+	rl-view-with-mediator SomeView --package=com.foo
 	
 	View with Mediator (as)
-	rl-view-with-mediator --package=com.foo --no-mxml
+	rl-view-with-mediator SomeView --package=com.foo --no-mxml
 	
 	Spark Module (mxml)
-	rl-module CustomModule --package=com.foo.custommodule
+	rl-module SomeModule --package=com.foo.custommodule
 	
 	Sprite Module (as)
-	rl-module CustomModule --package=com.foo.custommodule --no-mxml
+	rl-module SomeModule --package=com.foo.custommodule --no-mxml
 
 ##Development	
 
