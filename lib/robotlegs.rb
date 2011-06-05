@@ -14,7 +14,6 @@ require 'robotlegs/generators/view_with_mediator_generator'
 require 'robotlegs/generators/view_with_mediator_testcase_generator'
 require 'robotlegs/generators/module_generator'
 require 'robotlegs/generators/module_mediator_testcase_generator'
-require 'robotlegs/generators/module_project_generator'
 
 Sprout::Specification.new do |s|
   s.name    = Robotlegs::NAME

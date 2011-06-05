@@ -1,8 +1,0 @@
-#!/usr/bin/env ruby
-
-require 'rubygems'
-require 'robotlegs'
-
-generator = Robotlegs::ModuleProjectGenerator.new
-generator.parse! ARGV
-generator.execute

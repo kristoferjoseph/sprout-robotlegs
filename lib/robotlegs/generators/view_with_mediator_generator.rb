@@ -19,7 +19,7 @@ module Robotlegs
       end
 
       if test_class
-        generator :view_with_mediator_testcase, :input => "#{fully_qualified_class_name}MediatorTest", :force => true
+        generator :view_with_mediator_testcase, :input => "#{fully_qualified_class_name}Test", :force => true
       end
     end
     
@@ -35,10 +35,6 @@ module Robotlegs
     
     def package_name
       default_package_name.dup << ".view" << ".mediators"
-    end
-    
-    def component_package_name
-      default_package_name.dup << ".view" << ".component"
     end
 
   end
