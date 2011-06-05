@@ -1,6 +1,6 @@
 package <%= package_name %>
 {	
-	import <%= package_name %>.<%= class_name %>;
+	import <%= component_package_name %>.<%= class_name %>;
 	
 	import org.robotlegs.mvcs.Mediator;
 	
