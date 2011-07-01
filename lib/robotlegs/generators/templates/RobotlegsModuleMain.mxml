@@ -1,0 +1,22 @@
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+               xmlns:s="library://ns.adobe.com/flex/spark"
+               xmlns:mx="library://ns.adobe.com/flex/mx"
+               xmlns:context="<%= context_package %>"
+			   xmlns:views="<%= view_package %>"
+               minWidth="800"
+               minHeight="600"
+               width="1024"
+               height="768"
+               backgroundColor="0xFFFFFF"
+               pageTitle="<%= project_name.camel_case %>"
+               usePreloader="true">
+    <fx:Declarations>
+        <!-- You have to put all non-visual object declarations here -->
+        <context:<%= project_name.camel_case %>Context contextView="{<%= project_name.snake_case %>View}" />
+    </fx:Declarations>
+	<s:layout>
+        <s:BasicLayout/>
+    </s:layout>
+	<views:<%= class_name %>View id="<%= project_name.snake_case %>View" />
+</s:Application>
+

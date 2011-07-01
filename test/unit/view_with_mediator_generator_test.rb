@@ -51,17 +51,6 @@ class ViewWithMediatorGeneratorTest < Test::Unit::TestCase
       assert_file view_file
     end
     
-    should "generate a Mediator Test" do
-      @generator.input = "Sasafrass"
-      @generator.package = "com.foo.bar"
-      @generator.execute
-      
-      input_dir = File.join(@temp, "test", "com", "foo", "bar", "view", "mediators")
-      assert_directory input_dir
-      test_file = File.join(input_dir, "SasafrassMediatorTest.as")
-      assert_file test_file
-    end
-    
     should "respect mxml as false" do
        @generator.input = "Sasafrass"
        @generator.package = "com.foo.bar"

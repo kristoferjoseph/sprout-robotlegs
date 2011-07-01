@@ -1,4 +1,4 @@
-package <%= package_name %>
+package <%= context_package_name %>
 {
 	import flash.display.DisplayObjectContainer;
 

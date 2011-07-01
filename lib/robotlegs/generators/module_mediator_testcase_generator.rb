@@ -16,6 +16,14 @@ module Robotlegs
     def package_name
       default_package_name.dup << ".restricted"
     end
+    
+    def component_package_name
+      default_package_name.dup << ".view" << ".components"
+    end
+    
+    def component_class_name
+      class_name.chomp("Mediator");
+    end
 
   end
 end

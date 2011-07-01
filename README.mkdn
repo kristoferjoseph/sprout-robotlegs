@@ -68,6 +68,12 @@ This bundle contains generators for creating:
 	
 	Sprite Module (as)
 	rl-module SomeModule --package=com.foo.custommodule --no-mxml
+	
+	Module project generator (mxml)
+	rl-module-project SomeProject --package=com.foo
+	
+	Module project generator (as)
+	rl-module-project SomeProject --package=com.foo --no-mxml
 
 ##Development	
 
