@@ -2,7 +2,7 @@ package <%= package_name %>
 {	
 	import flash.display.Sprite;
 	
-	import <%= context_package %>;
+	import <%= context_package_name %>;
 	import <%= view_package %>.<%= class_name %>;
 	
 	import org.robotlegs.base.ContextEvent;

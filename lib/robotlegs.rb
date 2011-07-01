@@ -23,6 +23,6 @@ Sprout::Specification.new do |s|
     f.url = "http://downloads.robotlegs.org/robotlegs-framework-v#{Robotlegs::ZIP_VERSION}.zip"
     f.md5 = Robotlegs::ZIP_MD5
     f.archive_type = :zip
-    f.add_library :swc, ['bin/']
+    f.add_library :swc, ['bin/']  
   end
 end

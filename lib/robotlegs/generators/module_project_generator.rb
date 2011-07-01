@@ -94,7 +94,7 @@ module Robotlegs
       end
       
       def context_package_name
-        default_package_name.dup << ".restricted" << ".shell" << ".api"
+        default_package_name.dup << ".restricted" << ".shell" << ".api" << context_package
       end
       
       def view_class_name
