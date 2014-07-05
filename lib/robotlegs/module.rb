@@ -6,4 +6,6 @@ module Robotlegs
   # the sprout or gem, increment the micro value, or the 4th number in the version sequence.
   version_file = File.join(File.dirname(__FILE__), '..', '..', 'VERSION')
   VERSION = File.read(version_file).strip 
+  MODULAR_FLEX_VERSION = 'ff776b4'
+  MODULAR_AS3_VERSION = '406cf2b'
 end

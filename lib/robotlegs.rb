@@ -10,6 +10,11 @@ require 'robotlegs/generators/command_generator'
 require 'robotlegs/generators/service_generator'
 require 'robotlegs/generators/signal_command_generator'
 require 'robotlegs/generators/signal_context_generator'
+require 'robotlegs/generators/view_with_mediator_generator'
+require 'robotlegs/generators/view_with_mediator_testcase_generator'
+require 'robotlegs/generators/module_generator'
+require 'robotlegs/generators/module_mediator_testcase_generator'
+require 'robotlegs/generators/module_project_generator'
 
 Sprout::Specification.new do |s|
   s.name    = Robotlegs::NAME
@@ -18,6 +23,6 @@ Sprout::Specification.new do |s|
     f.url = "http://downloads.robotlegs.org/robotlegs-framework-v#{Robotlegs::ZIP_VERSION}.zip"
     f.md5 = Robotlegs::ZIP_MD5
     f.archive_type = :zip
-    f.add_library :swc, ['bin/']
+    f.add_library :swc, ['bin/']  
   end
 end

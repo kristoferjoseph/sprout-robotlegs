@@ -1,9 +1,15 @@
 package <%= package_name %>
 {	
-	import org.robotlegs.mvcs.Mediator;
+	import <%= package_name %>.<%= class_name %>;
 	
-	public class <%= class_name %> extends Mediator
+	import org.robotlegs.utilities.modular.mvcs.ModuleMediator;
+	
+	public class <%= class_name %>Mediator extends ModuleMediator
 	{		
+		// Declare the view to be injected
+		[Inject]
+		public var view:<%= class_name %>;
+		
 		//---------------------------------------
 		// OVERRIDEN METHODS
 		//---------------------------------------

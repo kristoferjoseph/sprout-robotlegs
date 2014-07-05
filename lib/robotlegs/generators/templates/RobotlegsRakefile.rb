@@ -9,6 +9,8 @@ library :robotlegs, :swc
 
 def configure_mxmlc t
   t.library_path << 'lib/robotlegs/robotlegs-framework-v<%= Robotlegs::ZIP_VERSION %>.swc'
+  #t.library_path << 'lib/robotlegs/joelhooks-robotlegs-utilities-Modular-<%= Robotlegs::MODULAR_FLEX_VERSION %>.swc'
+  #t.library_path << 'lib/robotlegs/Stray-robotlegs-utilities-Modular-<%= Robotlegs::MODULAR_AS3_VERSION %>.swc'
 end
 
 ##############################
